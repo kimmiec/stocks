@@ -6,6 +6,7 @@ import About from './pages/About';
 import Dashboard from './pages/Dashboard';
 import Stock from './pages/Stock';
 import Nav from './components/Nav';
+import stocks from './data.json';
 
 function App() {
   return (
@@ -15,13 +16,16 @@ function App() {
         <Route exact path='/'>
           <Home />
         </Route>
+
         <Route path='/about'>
           <About />
         </Route>
+
         <Route 
         path='/stocks/:symbol' 
-        render={(routerProps) => <Stock {...routerProps} /> }
+        render={(props) => <Stock stocks={stocks} {...props} /> }
         />
+
         <Route path='/stocks'>
           <Dashboard />
         </Route>

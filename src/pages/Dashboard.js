@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import stocks from '../data.json';
 
-const Dashboard = () => {
+const Dashboard = (props) => {
 
     return (
         <div className="stocks">
